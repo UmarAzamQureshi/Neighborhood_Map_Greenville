@@ -122,6 +122,16 @@ Tip: Click features for a quick property pop‑up. Use “Export visible” to d
 
 Swagger UI is available at `http://localhost:8000/docs` when running with `--reload`.
 
+### 🧑‍💼 Real‑world problems this solves
+- **Faster land‑use and zoning decisions**: Instantly visualize parcels, zoning, and subdivisions to answer “what’s allowed here?” without hopping across systems.
+- **Development history at a glance**: The subdivision timeline highlights when areas first developed, helping assess change, infill opportunities, and precedent.
+- **One map for many datasets**: Consolidates shapefiles (parcels, zoning, trails, streets, etc.) into a single, searchable, clickable map instead of scattered files and PDFs.
+- **Better infrastructure planning**: Overlay streets, sidewalks, trails, and water bodies with neighborhoods to prioritize capital projects where they’ll help most.
+- **Risk and compliance checks**: Spot FEMA flood zones and other constraints early, reducing costly late‑stage surprises for applicants and staff.
+- **Community engagement made visual**: Clear, shareable maps help residents understand proposals, current conditions, and trade‑offs.
+- **Data interoperability**: Converts PostGIS layers to web‑ready GeoJSON, so teams can reuse the same data in dashboards, analyses, or other apps.
+- **Faster pre‑application feasibility**: Developers and consultants can self‑serve basic due diligence—parcel counts, acreage, and zoning context—before formal submissions.
+
 ### 🧩 Configuration notes
 - The front‑end reads `VITE_API_BASE_URL` at build time; the UI falls back to `http://localhost:8000`.
 - `MapViewer.tsx` styles and colors for many common municipal layers are defined in code. Unknown tables get a neutral style.
@@ -139,9 +149,12 @@ Swagger UI is available at `http://localhost:8000/docs` when running with `--rel
 - Add legends and per‑layer opacity controls.
 - Hook in a simple analysis panel (e.g., parcel counts inside a drawn polygon).
 
-### 📄 License
-Pick a license that matches your use case (MIT is a friendly default). Add it as `LICENSE` in the repo.
 
-— Happy mapping! 🧭🌳
+### Images
 
+<img width="954" height="474" alt="Screenshot 2025-09-30 164855" src="https://github.com/user-attachments/assets/5f05e4da-865e-460d-a066-9eec811cd65f" />
+
+<img width="956" height="477" alt="Screenshot 2025-09-30 165414" src="https://github.com/user-attachments/assets/87d96486-b526-47e4-8d3f-bf2d2aaff866" />
+
+<img width="956" height="478" alt="Screenshot 2025-09-30 165502" src="https://github.com/user-attachments/assets/3159a1ce-e996-4f23-82a9-f58c382500d9" />
 
