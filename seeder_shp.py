@@ -44,12 +44,12 @@ def import_shapefile(filepath, table_name):
 
     existing = session.query(ShapefileImport).filter_by(checksum=checksum).first()
     if existing:
-        print(f"⚠️ Skipping {filepath}, already imported.")
+        print(f" Skipping {filepath}, already imported.")
         return
 
     try:
         # Read shapefile using GeoPandas
-        print(f"📖 Reading {filepath}...")
+        print(f" Reading {filepath}...")
         gdf = gpd.read_file(filepath)
         
         # Ensure CRS is set
@@ -57,7 +57,7 @@ def import_shapefile(filepath, table_name):
             gdf.crs = "EPSG:4326"  # Default to WGS84
         
         # Connect to PostgreSQL and import
-        print(f"📤 Importing to PostgreSQL table: {table_name}")
+        print(f" Importing to PostgreSQL table: {table_name}")
         
         # Parse connection string for psycopg2
         import re
@@ -98,10 +98,10 @@ def import_shapefile(filepath, table_name):
             """)
         
         conn.close()
-        print(f"✅ Imported {filepath} -> table {table_name}")
+        print(f" Imported {filepath} -> table {table_name}")
         
     except Exception as e:
-        print(f"❌ Error importing {filepath}: {e}")
+        print(f" Error importing {filepath}: {e}")
         return
 
     # Log import into DB
@@ -123,7 +123,7 @@ if __name__ == "__main__":
     # Create table for logging imports if it doesn’t exist
     Base.metadata.create_all(bind=engine)
 
-    shapefiles_dir = "shapefiles"  # 👈 put your shapefiles in this folder
+    shapefiles_dir = "shapefiles"  
     for filename in os.listdir(shapefiles_dir):
         if filename.endswith(".shp"):
             filepath = os.path.join(shapefiles_dir, filename)
