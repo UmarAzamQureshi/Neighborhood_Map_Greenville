@@ -150,6 +150,10 @@ Swagger UI is available at `http://localhost:8000/docs` when running with `--rel
 - Hook in a simple analysis panel (e.g., parcel counts inside a drawn polygon).
 
 
+— Happy mapping! 🧭🌳
+
+
+
 ### Images
 
 <img width="954" height="474" alt="Screenshot 2025-09-30 164855" src="https://github.com/user-attachments/assets/5f05e4da-865e-460d-a066-9eec811cd65f" />
